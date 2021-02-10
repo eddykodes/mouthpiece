@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 export default function PostsList() {
@@ -13,6 +14,7 @@ export default function PostsList() {
         <p className="mt-1 max-w-2xl text-sm text-gray-500">
           {post.content.substring(0,100)}
         </p>
+        <Link to={`/posts/${post.id}`}>More</Link>
       </div>
     </div>
   ))
